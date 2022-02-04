@@ -1,8 +1,23 @@
 import json
 
 words = []
-know = ['', '', '', 'a', '']
-other = ['t', 'e']
+know = list(input("know  -- ")) # ['r', 'e', '', '', 't']
+other = list(input("other -- ")) # []
+
+while True:
+    if len(know) == 5:
+        break
+
+    know.append('')
+
+while True:
+    if len(other) == 5:
+        break
+
+    other.append('')
+
+print(know)
+print(other)
 
 with open('dict.json', 'r') as f:
     words = json.loads(f.read())
